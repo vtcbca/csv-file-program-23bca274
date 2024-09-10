@@ -1,0 +1,37 @@
+.open marksheet
+
+sqlite> create table result
+   ...> (student_id int primary key,student_name,python,oop,stat,iks,mil);
+
+sqlite> insert into result values(1,'om',78,88,67,55,90),
+sqlite> (2,'sai',58,80,61,25,78),
+   ...> (3,'ram',45,76,60,45,72),
+   ...> (4,'roy',58,70,69,78,76),
+   ...> (5,'joy',66,61,50,79,71),
+   ...> (6,'smith',54,63,80,65,45),
+   ...> (7,'mark',40,61,60,75,90),
+   ...> (8,'alice',69,72,84,73,87),
+   ...> (9,'jack',50,53,76,56,83),
+   ...>  (10,'krish',44,20,55,75,40);
+
+sqlite> .mode box
+
+sqlite> select * from result;
+
++-------------------------------------------------------------+
+¦ student_id ¦ student_name ¦ python ¦ oop ¦ stat ¦ iks ¦ mil ¦
++------------+--------------+--------+-----+------+-----+-----¦
+¦ 1          ¦ om           ¦ 78     ¦ 88  ¦ 67   ¦ 55  ¦ 90  ¦
+¦ 2          ¦ sai          ¦ 58     ¦ 80  ¦ 61   ¦ 25  ¦ 78  ¦
+¦ 3          ¦ ram          ¦ 45     ¦ 76  ¦ 60   ¦ 45  ¦ 72  ¦
+¦ 4          ¦ roy          ¦ 58     ¦ 70  ¦ 69   ¦ 78  ¦ 76  ¦
+¦ 5          ¦ joy          ¦ 66     ¦ 61  ¦ 50   ¦ 79  ¦ 71  ¦
+¦ 6          ¦ smith        ¦ 54     ¦ 63  ¦ 80   ¦ 65  ¦ 45  ¦
+¦ 7          ¦ mark         ¦ 40     ¦ 61  ¦ 60   ¦ 75  ¦ 90  ¦
+¦ 8          ¦ alice        ¦ 69     ¦ 72  ¦ 84   ¦ 73  ¦ 87  ¦
+¦ 9          ¦ jack         ¦ 50     ¦ 53  ¦ 76   ¦ 56  ¦ 83  ¦
+¦ 10         ¦ krish        ¦ 44     ¦ 20  ¦ 55   ¦ 75  ¦ 40  ¦
++-------------------------------------------------------------+
+sqlite> .mode column
+sqlite> .mode csv
+sqlite> .output D:/23bca274/sqlite3/CSV/result.csv
